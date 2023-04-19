@@ -1,0 +1,272 @@
+.product{
+    box-sizing: border-box;
+    width: 250px;
+    /* height: 252px; */
+    border-radius: 5px;
+    /* box-shadow: 0px 3px 12px 0px rgba(128, 128, 128, 0.368); */
+    border: 1px solid #0000001f;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    animation: Animateproduct 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product:hover{
+    box-shadow: 0px 0px 8px 0px rgba(128, 128, 128, 0.400);
+}
+
+/* a.active{
+    font-weight: 900;
+    border-bottom: 1px solid black;
+} */
+
+
+.P-title:hover{
+    text-decoration: underline;
+}
+.like{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 5;
+    font-size: 30px;
+    transition: all 0.4s;
+    scale: 1;
+}
+
+.like:active {
+    scale: 0.7;
+}
+
+.image-div{
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.cross{
+    padding: 2px 10px;
+    background-color: rgb(46 46 46 / 78%);
+    color: #c2c2c2;
+    box-shadow: 0 3px 12px 0 rgb(128 128 128 / 52%);
+    font-size: 22px;
+    border: 10px;
+    position: fixed;
+    right: 5%;
+    bottom: 3%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: ease-in-out 0.15s;
+}
+.cross:hover{
+    background-color: black;
+}
+
+.image{
+    width: 200px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    transition: all 0.25s;
+}
+
+.image:hover{
+    width: 230px;
+}
+
+
+.details-img{
+    position: relative;
+    overflow: hidden;
+    /* place-self: start; */
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-row-start: 1;
+    gap: 5px;
+    width: 100%;
+}
+.images img{
+    width: 80px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.384);
+    box-shadow: 0 3px 12px 0px rgba(128, 128, 128, 0.166);
+    transition: all 0.2s;
+    scale: 1;
+    place-self: center;
+}
+
+.images img:hover{
+    scale: 0.86;
+}
+.container-div{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.liked-products{
+    max-width: 750px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Like-link{
+    position: relative;
+}
+.Liked-Count{
+    /* position: absolute; */
+    background-color: rgb(239 0 0);
+    color: white;
+    border-radius: 10px;
+    /* padding:1px 5px; */
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.alert-msg{
+    position: fixed;
+    left: 3%;
+    top: 12%;
+    border: 4px ;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    padding: 7px 14px; 
+    /* border: 1px solid rgba(128, 128, 128, 0.652); */
+    font-size: 16px;
+    background-color: #e47300;
+    color: rgb(255, 255, 255);
+    
+    /* z-index: 100; */
+    /* color: rgba(255, 255, 255, 0.736); */
+    /* animation: animate 2s; */
+    z-index: 1;
+    animation: animate ease-out 0.2s ;
+    scale: 1.2;
+}
+
+.detail-parent-div{
+    display: grid;
+    grid-template-columns:1fr 6fr;
+    gap: 10px;
+    place-items: center;
+}
+/* .details-images{
+    grid-
+} */
+
+.rating b{
+    background: #348e00;
+    padding: 4px 8px;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    border-radius: 6px;
+}
+
+.search{
+    max-width: 500px;
+    margin: auto;
+}
+
+#serach-form{
+    display: flex;
+    margin: 4px;
+    background-color: rgb(255, 255, 255);
+    padding: 2px 4px;
+    border-radius: 14px;
+    border: 1px solid rgba(128, 128, 128, 0.096);
+    box-shadow: 0px -1px 3px 0px rgb(0 157 255);
+}
+
+#Login-profile{
+    border: 1px solid rgb(0 157 255);
+    border-radius: 8px;
+    display: inline-block;
+    /* background: #fffae0; */
+    /* background: #adf4ff; */
+    /* background: rgb(0 157 255); */
+    /* color: saddlebrown; */
+    color: rgb(2, 133, 215) ;
+    transition: all 0.25s;
+    width: 150px;
+    text-align: center;
+}
+#Login-profile:hover{
+    background-color: rgb(0 157 255);
+    color: white;
+}
+
+
+#input-box{
+    border: 0;
+    outline: 0;
+    background: none;
+}
+#serach-form button{
+    border: 0;
+    width: 70px;
+    outline: 0;
+    background: none;
+}
+
+@keyframes Animateproduct {
+    0%{
+       scale: 0.5;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+
+@keyframes animate {
+    0%{
+        left: -10%;
+        scale: 0.5;
+        /* bottom: 10%; */
+    }
+    100%{
+        left: 3%;
+        scale: 1.2;
+        
+    }
+  
+}
+
+@media screen and (max-width : 1080px) {
+    .detail-parent-div{
+        grid-template-columns: 1fr;
+    }
+    .images{
+        grid-row-start: 2;
+        flex-direction: row;
+        overflow-x: scroll;
+        /* padding-left: 80px; */
+        /* padding-right: 50px; */
+    }
+}
+
+@media screen and ( max-width : 500px ) {
+    .images{
+        justify-content: space-between;
+    }
+    
+}
+
+

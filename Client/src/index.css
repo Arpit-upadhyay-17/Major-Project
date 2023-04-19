@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#root {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.338);
+}
+.users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.user{
+    width: 220px;
+    box-shadow: 0px 3px 12px 0px rgba(128, 128, 128, 0.298) ;
+    border-radius: 12px;
+    padding: 10px;
+}
+.profile-pic{
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border-radius:50px;
+    overflow: hidden;
+    
+}
+.profile-pic img {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.edit{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input  {
+    padding : 5px ;
+    border-radius: 5px;
+     width : 180px ; 
+     outline:none;
+     border: 1px solid rgba(128, 128, 128, 0.365);
+}

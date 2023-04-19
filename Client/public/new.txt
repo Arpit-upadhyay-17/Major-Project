@@ -1,0 +1,5 @@
+#202020 dark theme;
+#1c2c35cf color platte1;
+#002d38; color platte1;
+
+color1 : #afeaff;
